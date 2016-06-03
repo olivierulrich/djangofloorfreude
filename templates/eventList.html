@@ -1,10 +1,69 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Events</h2>
-    <ul>
-        {% for event in object_list %}
-            <li>{{ event.title }}</li>
-        {% endfor %}
-    </ul>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="col-xs-12">
+                <h3>Events</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+            <div class="card">
+                <a class="btn btn-danger btn-block" href=""><i class="fa fa-plus"
+                                                               aria-hidden="true"></i>
+                    Event
+                    Eintragen</a>
+                <a class="btn btn-default btn-block"><i class="fa fa-filter" aria-hidden="true"></i> Filter</a>
+                <a class="btn btn-default btn-block"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a>
+                <form class="main form hidden">
+                    <div class="form-group">
+                        <label class="control-label" for="date">Datum</label>
+                        <div class="controls">
+                            <input id="daterange" type="text" name="daterange"
+                                   class="set-due-date form-control"
+                                   value="01/01/2015 - 01/31/2015"/>
+                        </div>
+                    </div>
+                </form>
+                <hr class="hidden-xs">
+                <div class="recommended-event hidden-xs">
+                    <h4>Recommended Event</h4>
+                    <p><i class="fa fa-calendar-o" aria-hidden="true"></i> Date</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> Location</p>
+                    <p><i class="fa fa-usd" aria-hidden="true"></i> Price</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <div class="row clearfix">
+                {% for event in object_list %}
+                    <div class="event no-padding">
+                        <a href="#">
+                            <div class="card">
+                                <h4>
+                                    {{ event.title }}
+                                </h4>
+                                <div class="card-content hidden">
+                                    {{ event.startDate }}<br>
+                                    {{ event.price }}<br>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".event").click(function () {
+            $(this).toggleClass("event-expanded");
+            $(".card-content", this).toggleClass("hidden");
+        });
+    </script>
+
+
 {% endblock %}

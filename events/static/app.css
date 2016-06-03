@@ -1,0 +1,125 @@
+.footer {
+  background-color: #245775;
+  min-height: 10vh;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.navigation {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color: #245775;
+  color: #ffffff;
+}
+.navigation a {
+  color: #ffffff;
+}
+.navigation .btn-group {
+  border: none;
+  color: #ffffff;
+}
+.navigation .btn-group .btn {
+  border: none;
+}
+.navigation .btn-group a {
+  color: #ffffff;
+}
+.logo {
+  padding: 2vh;
+  margin-top: 5vh;
+  background-color: #ffffff;
+  color: #6b767d;
+  width: 20vw;
+  position: absolute;
+  left: calc(40%);
+  top: 6vh;
+}
+.main-content {
+  margin-top: 5em;
+}
+@media screen and (min-width: 480px) {
+  .main-content {
+    margin-top: 120px;
+  }
+}
+.nav-right {
+  margin-bottom: 15px;
+  float: left;
+}
+@media screen and (min-width: 480px) {
+  .nav-right {
+    margin-top: 15px;
+    float: right;
+  }
+}
+.card {
+  background-color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+}
+@media screen and (min-width: 480px) {
+  .card {
+    margin: 10px 0 0;
+    min-height: 225px;
+  }
+}
+.sidebar {
+  padding: 1em;
+  margin-top: 10px;
+}
+.margin-t-25 {
+  margin-top: 25px;
+}
+.event {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media (min-width: 768px) {
+  .event {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.event-expanded {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .event-expanded {
+    float: left;
+    width: 100%;
+  }
+}
+.recommended-event {
+  border: #245775 1px solid;
+  padding: 1em;
+}
+@media screen and (max-width: 768px) {
+  .no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+hr {
+  border-top: #a0a9ae 1px solid;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+footer {
+  background-color: #8e989f;
+  color: #ffffff;
+  min-height: 5em;
+  margin-top: 5em;
+}
